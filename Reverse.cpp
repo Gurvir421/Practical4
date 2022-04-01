@@ -8,7 +8,10 @@ Reverse::Reverse() {
 }
 
 int Reverse::reverseDigit(int value) {
-    value=abs(value);
+
+    if (value<0) {
+        return -1;
+    }
     if (value==0) {
         return 0;
     }
@@ -21,11 +24,18 @@ int Reverse::reverseDigit(int value) {
 }
 
 std::string Reverse::reverseString(std::string letters) {
-    int length=letters.length()-1;
-    if (length<0) {
-        return "";
+    
+    
+    
+    int length=letters.length();
+    
+    if (length==1) {
+        return letters;
+    }
+    if (length<=0) {
+        return "ERROR";
     }
     std::string nextLetters=letters;
-    nextLetters.erase (length,1);
+    nextLetters.erase (length-1,1);
     return letters.back () + reverseString(nextLetters);
 }
