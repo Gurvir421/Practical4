@@ -9,9 +9,18 @@ Truckloads::Truckloads() {
 
 int Truckloads::numTrucks(int numCrates , int loadSize){
     
+    
+    if (numCrates=0) {
+        return 0;
+    }
+    
     if (numCrates<=loadSize) {
         return 1;
     }
+    else if (loadSize==0) {
+        return -1;
+    }
+    
     int value1;
     int value2;
         
