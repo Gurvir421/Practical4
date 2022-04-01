@@ -10,7 +10,7 @@ Truckloads::Truckloads() {
 int Truckloads::numTrucks(int numCrates , int loadSize){
     
     
-    if (numCrates=0) {
+    if (numCrates==0) {
         return 0;
     }
     
