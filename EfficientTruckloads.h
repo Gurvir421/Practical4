@@ -4,10 +4,9 @@
 #include <vector>
 
 
-class EfficientTruckLoads {
+class EfficientTruckloads {
     public:
-    EfficientTruckLoads();
-    void print();
+    EfficientTruckloads();
     int numTrucks(int numCrates , int loadSize);
     
     std::vector<int> table;

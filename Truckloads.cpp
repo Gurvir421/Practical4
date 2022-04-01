@@ -17,9 +17,9 @@ int Truckloads::numTrucks(int numCrates , int loadSize){
     if (numCrates<=loadSize) {
         return 1;
     }
-    else if (loadSize==0) {
-        return -1;
-    }
+    //else if (loadSize==0) {
+    //    return -1;
+    //}
     
     int value1;
     int value2;
@@ -32,6 +32,5 @@ int Truckloads::numTrucks(int numCrates , int loadSize){
         value1=(numCrates-1)/2;
         value2=(numCrates+1)/2;
     }
-    std::cout << value1 << " " << value2 <<std::endl;
     return numTrucks(value1,loadSize) + numTrucks(value2,loadSize);
 }
