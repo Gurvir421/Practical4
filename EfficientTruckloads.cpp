@@ -13,9 +13,6 @@ EfficientTruckloads::EfficientTruckloads() {
 
 int EfficientTruckloads::numTrucks(int numCrates , int loadSize){
 
-    
-    
-    
      if (table.size() == 0) {
          for (int i=0;i<=numCrates;i++) {
              table.push_back(-1);
@@ -24,7 +21,6 @@ int EfficientTruckloads::numTrucks(int numCrates , int loadSize){
         return 0;
         }
     }
-     }
 
     if (numCrates<=loadSize) {
         table.at(numCrates)=1;
